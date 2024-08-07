@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100 * index);  // Adjust timing as needed
     });
 
-    // Function to animate mission text words one by one
+    // Animate words coming in one by one for mission statement
     function animateMissionText() {
         const missionText = document.querySelector('.mission-text');
         const missionWords = missionText.textContent.split(' ');
@@ -25,47 +25,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Function to check if element is in viewport
-    function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
+    // Function to add animation class
+    function addAnimationClass(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate__animated', entry.target.dataset.animation);
+                if (entry.target.classList.contains('mission-statement')) {
+                    animateMissionText();
+                }
+                observer.unobserve(entry.target); // Stop observing after animation is added
+            }
+        });
     }
 
-    // Function to add animation class when in viewport
-    function addAnimationClass(element, animationClass, callback) {
-        if (isInViewport(element)) {
-            element.classList.add('animate__animated', animationClass);
-            if (callback) callback();
-        }
-    }
-
-    // Elements to animate
-    const missionSection = document.querySelector('.mission-statement');
-    const announcementsSection = document.querySelector('.announcements');
-    const volunteerSection = document.querySelector('.volunteer-form');
-    const highlightsSection = document.querySelector('.featured-highlights');
-    const quotesSection = document.querySelector('.member-quotes');
-
-    // Scroll event listener
-    window.addEventListener('scroll', function() {
-        addAnimationClass(missionSection, 'animate__fadeInUp', animateMissionText);
-        addAnimationClass(announcementsSection, 'animate__fadeInLeft');
-        addAnimationClass(volunteerSection, 'animate__fadeInUp');
-        addAnimationClass(highlightsSection, 'animate__fadeInRight');
-        addAnimationClass(quotesSection, 'animate__fadeInUp');
+    // Intersection Observer
+    const observer = new IntersectionObserver(addAnimationClass, {
+        threshold: 0.1
     });
 
-    // Initial check
-    addAnimationClass(missionSection, 'animate__fadeInUp', animateMissionText);
-    addAnimationClass(announcementsSection, 'animate__fadeInLeft');
-    addAnimationClass(volunteerSection, 'animate__fadeInUp');
-    addAnimationClass(highlightsSection, 'animate__fadeInRight');
-    addAnimationClass(quotesSection, 'animate__fadeInUp');
+    // Elements to animate
+    const sections = document.querySelectorAll('[data-animation]');
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 
     // Navbar scroll effect
     let lastScrollTop = 0;
