@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e8eaf6; /* Slightly darker background color */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+html, body {
+    height: 100%;
+}
+
+.navbar {
+    transition: top 0.3s;
+    padding: 0.5rem 1rem;
+    background-color: #ff9933; /* Saffron color */
+}
+
+.navbar-logo {
+    max-height: 40px;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #333 !important;
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    opacity: 0.6; /* Increase opacity a bit */
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em; /* Increase font size */
+    font-family: 'Playfair Display', serif;
+    padding: 0 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Add background for better readability */
+    border-radius: 10px;
+}
+
+.mission-statement {
+    padding: 30px;
+    background-color: rgba(255, 153, 51, 0.8); /* Saffron color with opacity */
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px 0;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.5s ease-in-out;
+    background-image: url('assets/images/background_image.png'); /* Path to your background image */
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.mission-statement h2 {
+    font-size: 2em; /* Increase font size */
+    color: white; /* White color */
+}
+
+.mission-statement .mission-text-box {
+    background-color: rgba(0, 0, 0, 0.5); /* Add background for better readability */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-statement .mission-text {
+    font-size: 1.3em; /* Increase font size */
+    color: white; /* White color */
+    font-family: 'Nunito', sans-serif;
+}
+
+.announcements {
+    padding: 30px;
+    background-color: rgba(56, 142, 60, 0.8); /* Green color with opacity */
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px 0;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.5s ease-in-out;
+    background-image: url('assets/images/background_image.png'); /* Path to your background image */
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.announcements h2 {
+    font-size: 1.5em;
+    color: white; /* White color */
+}
+
+.announcements .scrolling-wrapper {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+}
+
+.announcements .announcement-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-right: 20px;
+    min-width: 150px; /* Decrease min-width */
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.announcements .announcement-card img {
+    width: 100%;
+    height: auto;
+    max-height: 100px; /* Limit image height */
+}
+
+.volunteer-form {
+    padding: 30px;
+    background-color: rgba(255, 153, 51, 0.8); /* Saffron color with opacity */
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px 0;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.5s ease-in-out;
+    background-image: url('assets/images/background_image.png'); /* Path to your background image */
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.volunteer-form h2 {
+    font-size: 1.5em;
+    color: white; /* White color */
+}
+
+.volunteer-form .form-box {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.featured-highlights {
+    padding: 30px;
+    background-color: rgba(56, 142, 60, 0.8); /* Green color with opacity */
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px 0;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.5s ease-in-out;
+    background-image: url('assets/images/background_image.png'); /* Path to your background image */
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.featured-highlights h2 {
+    font-size: 1.5em;
+    color: white; /* White color */
+}
+
+.featured-highlights .scrolling-wrapper {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    justify-content: center; /* Center the items */
+    scroll-snap-type: x mandatory;
+}
+
+.featured-highlights .highlight-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-right: 20px;
+    min-width: 150px; /* Decrease min-width */
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.featured-highlights .highlight-card img {
+    width: 100%;
+    height: auto;
+    max-height: 100px; /* Limit image height */
+}
+
+.member-quotes {
+    padding: 30px;
+    background-color: rgba(255, 153, 51, 0.8); /* Saffron color with opacity */
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px 0;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.5s ease-in-out;
+    background-image: url('assets/images/background_image.png'); /* Path to your background image */
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.member-quotes h2 {
+    font-size: 1.5em;
+    color: white; /* White color */
+}
+
+.member-quotes .scrolling-wrapper {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    justify-content: center; /* Center the items */
+    scroll-snap-type: x mandatory;
+}
+
+.member-quotes .quote-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-right: 20px;
+    min-width: 250px; /* Increase min-width */
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.footer {
+    background-color: #ff9933;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.footer span {
+    color: red;
+}
+
+.btn-primary {
+    background-color: #138808; /* Green color */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0b5e08; /* Darker green color */
+}
+
+/* Custom Scrollbar */
+.scrolling-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scrolling-wrapper::-webkit-scrollbar-thumb {
+    background-color: #138808; /* Green color */
+    border-radius: 10px;
+}
+
+.scrolling-wrapper::-webkit-scrollbar-track {
+    background: #ff9933; /* Saffron color */
+}
+
+@media (max-width: 768px) {
+    .banner-text {
+        font-size: 1.5em;
+    }
+
+    .mission-statement, .announcements, .volunteer-form, .featured-highlights, .member-quotes {
+        padding: 20px;
+    }
+
+    .mission-statement h2, .announcements h2, .volunteer-form h2, .featured-highlights h2, .member-quotes h2 {
+        font-size: 1.2em;
+    }
+
+    .mission-statement .mission-text, .announcements p, .volunteer-form p, .featured-highlights p, .member-quotes p {
+        font-size: 0.9em;
+    }
+
+    .scrolling-wrapper {
+        padding: 10px 0;
+    }
+}
