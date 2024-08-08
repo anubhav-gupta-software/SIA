@@ -297,7 +297,8 @@ html, body {
     }
 
     .banner-text {
-        font-size: 1.5em;
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+        top: 60%; /* Adjust position to avoid overlap with navbar */
     }
 
     .mission-statement, .announcements, .volunteer-form, .featured-highlights, .member-quotes {
