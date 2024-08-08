@@ -286,7 +286,16 @@ html, body {
     background: #ff9933; /* Saffron color */
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1em;
+    }
+
     .banner-text {
         font-size: 1.5em;
     }
@@ -305,5 +314,9 @@ html, body {
 
     .scrolling-wrapper {
         padding: 10px 0;
+    }
+
+    .highlight-card img, .announcement-card img {
+        max-height: 80px; /* Further limit image height for smaller screens */
     }
 }

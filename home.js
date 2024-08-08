@@ -29,7 +29,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function addAnimationClass(entries, observer) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate__animated', entry.target.dataset.animation);
+                if (window.innerWidth < 768) { // Mobile
+                    entry.target.classList.add('animate__animated', entry.target.dataset.mobileAnimation);
+                } else { // Desktop
+                    entry.target.classList.add('animate__animated', entry.target.dataset.animation);
+                }
                 if (entry.target.classList.contains('mission-statement')) {
                     animateMissionText();
                 }
