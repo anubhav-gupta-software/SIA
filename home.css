@@ -117,6 +117,7 @@ html, body {
     overflow-x: auto;
     padding: 10px 0;
     scroll-snap-type: x mandatory;
+    padding-left: 1rem; /* Add padding to left to ensure all items are visible */
 }
 
 .announcements .announcement-card {
@@ -125,15 +126,10 @@ html, body {
     border-radius: 5px;
     padding: 20px;
     margin-right: 20px;
-    min-width: 150px; /* Decrease min-width */
+    min-width: 250px; /* Increase min-width */
+    width:300px;
     flex: 0 0 auto;
     scroll-snap-align: start;
-}
-
-.announcements .announcement-card img {
-    width: 100%;
-    height: auto;
-    max-height: 100px; /* Limit image height */
 }
 
 .volunteer-form {
@@ -185,8 +181,9 @@ html, body {
     display: flex;
     overflow-x: auto;
     padding: 10px 0;
-    justify-content: center; /* Center the items */
+    /* justify-content: center; Center the items */
     scroll-snap-type: x mandatory;
+    padding-left: 1rem; /* Add padding to left to ensure all items are visible */
 }
 
 .featured-highlights .highlight-card {
@@ -195,7 +192,9 @@ html, body {
     border-radius: 5px;
     padding: 20px;
     margin-right: 20px;
-    min-width: 150px; /* Decrease min-width */
+    min-width: 250px; /* Match min-width */
+    width:300px;
+
     flex: 0 0 auto;
     scroll-snap-align: start;
 }
@@ -203,7 +202,8 @@ html, body {
 .featured-highlights .highlight-card img {
     width: 100%;
     height: auto;
-    max-height: 100px; /* Limit image height */
+    max-height: 150px; /* Limit image height */
+    object-fit: cover;
 }
 
 .member-quotes {
@@ -228,8 +228,9 @@ html, body {
     display: flex;
     overflow-x: auto;
     padding: 10px 0;
-    justify-content: center; /* Center the items */
+    /* justify-content: center; Center the items */
     scroll-snap-type: x mandatory;
+    padding-left: 1rem; /* Add padding to left to ensure all items are visible */
 }
 
 .member-quotes .quote-card {
@@ -238,7 +239,9 @@ html, body {
     border-radius: 5px;
     padding: 20px;
     margin-right: 20px;
-    min-width: 250px; /* Increase min-width */
+    min-width: 250px; /* Match min-width */
+        width:300px;
+
     flex: 0 0 auto;
     scroll-snap-align: start;
 }
@@ -286,6 +289,14 @@ html, body {
     background: #ff9933; /* Saffron color */
 }
 
+
+
+
+
+
+
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .navbar-nav {
@@ -303,6 +314,7 @@ html, body {
         font-size: 0.4em; /* Adjust font size for smaller screens */
         /* top: 60%; Adjust position to avoid overlap with navbar */
     }
+    
 
     .mission-statement, .announcements, .volunteer-form, .featured-highlights, .member-quotes {
         padding: 20px;
