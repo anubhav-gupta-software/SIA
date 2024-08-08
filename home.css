@@ -333,6 +333,6 @@ html, body {
     }
 
     .highlight-card img, .announcement-card img {
-        max-height: 80px; /* Further limit image height for smaller screens */
+        /* max-height: 80px; Further limit image height for smaller screens */
     }
 }
