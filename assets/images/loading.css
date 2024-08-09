@@ -1,0 +1,48 @@
+/* Loading Screen Styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('assets/images/indian_background_pattern.png'); /* Subtle Indian cultural background */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Light overlay to make text and spinner stand out */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#loading-screen .spinner {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #ff9933; /* Saffron color */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+#loading-screen p {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #138808; /* Green color */
+}
+
+/* Spinner Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
