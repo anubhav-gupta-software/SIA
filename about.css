@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('assets/images/about.png'); /* Background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+    transition: top 0.3s;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 153, 51, 0.9); /* Saffron color with slight transparency */
+}
+
+.navbar-logo {
+    max-height: 40px;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #333 !important;
+}
+
+/* About Us Section */
+.intro {
+    padding: 80px 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly dark background for readability */
+    border-radius: 10px;
+    color: white;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+/* E-board Section */
+.eboard-members {
+    padding: 60px 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background */
+    border-radius: 10px;
+    color: #333;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.eboard-members h2 {
+    font-size: 2.5em;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+.scroll-container::-webkit-scrollbar {
+    height: 10px;
+    background-color: #e0f7fa; /* Light blue to match an Indian aesthetic */
+    border-radius: 5px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff9933, #138808); /* Saffron and green gradient */
+    border-radius: 5px;
+    border: 2px solid #fff; /* White border to add contrast */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for a 3D effect */
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #ffb347, #1b5e20); /* Slightly lighter gradient on hover */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: #ffffff; /* White background for contrast */
+    border-radius: 5px;
+}
+
+/* Member Cards */
+.scroll-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.member-card {
+    min-width: 150px;
+    max-width: 150px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.member-card img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.member-card h3 {
+    font-size: 1em;
+    color: #333;
+}
+
+.member-card:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Us Section */
+.contact-us {
+    padding: 60px 20px;
+    background-color: rgba(240, 240, 240, 0.95); /* Light background with slight transparency */
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-us h2 {
+    font-size: 2.5em;
+    font-family: 'Playfair Display', serif;
+    color: #ff9933; /* Saffron color for the title */
+    margin-bottom: 30px;
+}
+
+.contact-us form {
+    text-align: left;
+}
+
+.contact-us .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-us .form-group label {
+    font-weight: bold;
+    color: #138808; /* Green color for labels */
+}
+
+.contact-us .form-control {
+    border: 2px solid #138808; /* Green border for inputs */
+    border-radius: 5px;
+}
+
+.contact-us .btn-primary {
+    background-color: #ff9933; /* Saffron color for the button */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us .btn-primary:hover {
+    background-color: #ffb347; /* Lighter saffron on hover */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #ff9933;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.footer span {
+    color: red;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .contact-us h2 {
+        font-size: 2em;
+    }
+
+    .contact-us .btn-primary {
+        width: 100%;
+        padding: 15px;
+    }
+}
