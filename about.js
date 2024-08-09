@@ -1,5 +1,28 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Navbar hide/show on scroll
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to add animation class when sections come into view
+    function addAnimationClass(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate__animated', 'animate__fadeIn');
+                entry.target.style.setProperty('--animate-duration', '0.5s'); // Faster animation duration
+                observer.unobserve(entry.target); // Stop observing after animation is added
+            }
+        });
+    }
+
+    // Intersection Observer to trigger animations
+    const observer = new IntersectionObserver(addAnimationClass, {
+        threshold: 0.1
+    });
+
+    // Elements to animate
+    const sections = document.querySelectorAll('section');
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // Navbar scroll effect
     let lastScrollTop = 0;
     const navbar = document.querySelector('.navbar');
 
