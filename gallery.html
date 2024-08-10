@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Students of India Organization at USF</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="gallery.css"> <!-- Link to the CSS file for Gallery page -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -25,51 +24,77 @@
                         <a class="nav-link" href="index.html#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#about">About Us</a>
+                        <a class="nav-link" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#events">Events</a>
-                    </li>
+                        <a class="nav-link" href="events.html">Events</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#resources">Resources</a></li>
+                        <a class="nav-link" href="resources.html">Resources</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#gallery">Gallery</a></li>
+                        <a class="nav-link" href="gallery.html">Gallery</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#contact">Contact Us</a></li>
+                        <a class="nav-link" href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <section class="gallery" data-animation="animate__fadeInUp" data-mobile-animation="animate__fadeIn" id="gallery">
+    <!-- Introductory Section -->
+    <section class="gallery-intro">
         <div class="container">
             <h2>Gallery</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="assets/images/event1.jpg" class="card-img-top" alt="Event 1">
-                        <div class="card-body">
-                            <p class="card-text">Diwali Night 2023</p>
-                        </div>
-                    </div>
+            <p>Welcome to the SIA at USF Gallery. Here you will find a compilation of images from our events, showcasing the vibrant culture, lively celebrations, and unforgettable memories we've created together.</p>
+        </div>
+    </section>
+
+    <!-- Event Gallery Section -->
+    <section class="event-gallery">
+        <div class="container">
+            <h2>Event Highlights</h2>
+            <div class="scrolling-wrapper">
+                <!-- Example Event -->
+                <div class="event-item">
+                    <a href="https://drive.google.com/example-link" target="_blank">
+                        <img src="assets/images/event1.jpg" alt="Event 1">
+                        <h3>Garba Night</h3>
+                    </a>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="assets/images/event2.jpg" class="card-img-top" alt="Event 2">
-                        <div class="card-body">
-                            <p class="card-text">Holi Festival 2023</p>
-                        </div>
-                    </div>
+                <div class="event-item">
+                    <a href="https://drive.google.com/example-link2" target="_blank">
+                        <img src="assets/images/event2.jpg" alt="Event 2">
+                        <h3>Game Night</h3>
+                    </a>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="assets/images/event3.jpg" class="card-img-top" alt="Event 3">
-                        <div class="card-body">
-                            <p class="card-text">Independence Day Parade 2023</p>
-                        </div>
-                    </div>
+                <div class="event-item">
+                    <a href="https://drive.google.com/example-link3" target="_blank">
+                        <img src="assets/images/event3.jpg" alt="Event 3">
+                        <h3>Fall Welcome Event</h3>
+                    </a>
                 </div>
-                <!-- Add more photos and videos as needed -->
+                <div class="event-item">
+                    <a href="https://drive.google.com/example-link4" target="_blank">
+                        <img src="assets/images/event4.jpg" alt="Event 4">
+                        <h3>Yoga with Isha</h3>
+                    </a>
+                </div>
+                <div class="event-item">
+                    <a href="https://drive.google.com/example-link5" target="_blank">
+                        <img src="assets/images/event5.jpg" alt="Event 5">
+                        <h3>Independence Day</h3>
+                    </a>
+                </div>
+                <div class="event-item">
+                    <a href="https://drive.google.com/example-link6" target="_blank">
+                        <img src="assets/images/event6.jpg" alt="Event 6">
+                        <h3>Charity Fundraiser</h3>
+                    </a>
+                </div>
+                <div class="event-item">
+                    <a href="https://drive.google.com/example-link7" target="_blank">
+                        <img src="assets/images/event7.jpg" alt="Event 7">
+                        <h3>Cultural Fair</h3>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -83,6 +108,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="home.js"></script>
+    <script src="gallery.js"></script> <!-- JavaScript file for Gallery page -->
 </body>
 </html>

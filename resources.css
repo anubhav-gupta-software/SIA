@@ -21,7 +21,7 @@ body {
 
 .resources-section {
     padding: 60px 20px;
-    background-color: rgba(240, 240, 240, 0.9); /* Slightly transparent to let the background show through */
+    background-color: rgba(240, 240, 240, 0.90); /* Slightly transparent to let the background show through */
     border-radius: 10px;
     margin: 20px auto;
     max-width: 1200px;
