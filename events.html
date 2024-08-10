@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events - Students of India Organization at USF</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="events.css"> <!-- Link to the CSS file for Events page -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -25,91 +24,68 @@
                         <a class="nav-link" href="index.html#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#about">About Us</a>
+                        <a class="nav-link" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#events">Events</a>
+                        <a class="nav-link" href="events.html">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#resources">Resources</a></li>
+                        <a class="nav-link" href="resources.html">Resources</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#gallery">Gallery</a></li>
+                        <a class="nav-link" href="gallery.html">Gallery</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#contact">Contact Us</a></li>
+                        <a class="nav-link" href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <section class="upcoming-events" data-animation="animate__fadeInUp" data-mobile-animation="animate__fadeIn" id="upcoming-events">
+    <!-- Upcoming Events Section -->
+    <section class="upcoming-events" id="upcoming">
         <div class="container">
             <h2>Upcoming Events</h2>
-            <div class="event-card">
-                <h3>Diwali Night</h3>
-                <p>Date: November 4, 2024</p>
-                <p>Time: 6:00 PM</p>
-                <p>Location: MSC Ballroom</p>
-                <p>Join us for a night of celebration with lights, sweets, and cultural performances.</p>
+            <div id="calendar">
+                <!-- Calendar will be generated here by JavaScript -->
             </div>
-            <div class="event-card">
-                <h3>Holi Festival</h3>
-                <p>Date: March 23, 2024</p>
-                <p>Time: 2:00 PM</p>
-                <p>Location: USF Soccer Fields</p>
-                <p>Celebrate the festival of colors with music, dancing, and food.</p>
-            </div>
-            <div class="event-card">
-                <h3>Guest Lecture Series</h3>
-                <p>Date: January 15, 2024</p>
-                <p>Time: 5:00 PM</p>
-                <p>Location: Patel Center Auditorium</p>
-                <p>Attend a lecture by a prominent speaker on Indian history and culture.</p>
-            </div>
-            <!-- Add more upcoming events as needed -->
         </div>
     </section>
 
-    <section class="past-events" data-animation="animate__fadeInLeft" data-mobile-animation="animate__fadeIn" id="past-events">
+    <!-- Past Events Section -->
+    <section class="past-events" id="past">
         <div class="container">
             <h2>Past Events</h2>
-            <div class="scrolling-wrapper">
-                <div class="event-card">
+            <div class="event-list">
+                <!-- Each past event will have an image, title, date, and short description -->
+                <div class="event-item">
                     <img src="assets/images/event1.jpg" alt="Event 1">
-                    <p>Diwali Night 2023: A night of lights, sweets, and cultural performances.</p>
+                    <h3>Diwali Celebration</h3>
+                    <p>Date: November 4, 2023</p>
+                    <p>Description: A grand celebration with lights, sweets, and fireworks.</p>
                 </div>
-                <div class="event-card">
-                    <img src="assets/images/event2.jpg" alt="Event 2">
-                    <p>Holi Festival 2023: A colorful celebration with music and dancing.</p>
-                </div>
-                <div class="event-card">
-                    <img src="assets/images/event3.jpg" alt="Event 3">
-                    <p>Independence Day Parade 2023: Celebrating our heritage and patriotism.</p>
-                </div>
-                <!-- Add more past events as needed -->
+                <!-- More past events can be added similarly -->
             </div>
         </div>
     </section>
 
-    <section class="volunteer-registration" data-animation="animate__fadeInRight" data-mobile-animation="animate__fadeIn" id="volunteer-registration">
+    <!-- Volunteer Registration Form -->
+    <section class="volunteer-form" id="volunteer">
         <div class="container">
             <h2>Volunteer Registration</h2>
-            <div class="form-box">
-                <form>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
     </section>
 
@@ -122,6 +98,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="home.js"></script>
+    <script src="events.js"></script> <!-- JavaScript file for Events page -->
 </body>
 </html>
