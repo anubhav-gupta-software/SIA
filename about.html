@@ -149,9 +149,20 @@
     <script src="about.js"></script> <!-- JavaScript file for the About page -->
     <script>
         var loader = document.getElementById("preloader");
-        window.addEventListener("load", function(){
+        
+        function hideLoader() {
             loader.style.display = "none";
-        })
+        }
+    
+        window.addEventListener("load", function() {
+            hideLoader();
+        });
+    
+        // Fallback in case the page takes longer than 1 second to load
+        setTimeout(function() {
+            hideLoader();
+        }, 1000); // 1 second delay
     </script>
+    
 </body>
 </html>
