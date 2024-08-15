@@ -1,14 +1,17 @@
 #preloader {
+    top: 0;
+    left: 0;
     background: #000 url(assets/images/loader.gif) no-repeat center;
     height: 100vh;
-    width:100vw;
+    width: 100vw;
     position: fixed;
-    z-index: 100;
-    padding:0%;
-    margin: 0%;
+    z-index: 9999;
+    padding: 0;
+    margin: 0;
 }
-
-body {
-    padding:0px;
-    margin: 0px;
+html, body {
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling while loader is active */
+    padding: 0;
+    margin: 0;
 }
