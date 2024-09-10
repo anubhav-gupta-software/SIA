@@ -11,7 +11,8 @@
 }
 html, body {
     height: 100%;
-    overflow: hidden; /* Prevent scrolling while loader is active */
+    /* overflow: hidden;  */
     padding: 0;
     margin: 0;
 }
+
