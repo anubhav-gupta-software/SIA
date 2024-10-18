@@ -320,6 +320,78 @@ html, body {
 
 
 
+
+.our-sponsors {
+    padding: 30px;
+    background-color: rgba(255, 153, 51, 0.8); /* Saffron color with opacity */
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px 0;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.5s ease-in-out;
+    background-image: url('assets/images/background_image.png');
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.our-sponsors h2 {
+    font-size: 1.5em;
+    color: white;
+}
+
+.our-sponsors .scrolling-wrapper {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+    padding-left: 1rem;
+}
+
+.our-sponsors .sponsor-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-right: 20px;
+    min-width: 250px;
+    width: 300px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 350px; /* Set consistent height */
+}
+
+.our-sponsors .sponsor-card img {
+    width: 100%;
+    height: 100%; /* Uniform height for images */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.our-sponsors .sponsor-text {
+    margin-top: 10px;
+}
+
+.our-sponsors .sponsor-text p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .navbar-nav {
