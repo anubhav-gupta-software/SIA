@@ -321,6 +321,58 @@ html, body {
 
 
 
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1em;
+    }
+
+    .banner-text {
+        top:60%;
+    }
+    .banner-text h1 {
+        font-size: 0.4em; /* Adjust font size for smaller screens */
+        /* top: 60%; Adjust position to avoid overlap with navbar */
+    }
+    
+
+    .mission-statement, .announcements, .volunteer-form, .featured-highlights, .member-quotes {
+        padding: 20px;
+    }
+
+    .mission-statement h2, .announcements h2, .volunteer-form h2, .featured-highlights h2, .member-quotes h2 {
+        font-size: 1.2em;
+    }
+
+    .mission-statement .mission-text, .announcements p, .volunteer-form p, .featured-highlights p, .member-quotes p {
+        font-size: 0.9em;
+    }
+
+    .scrolling-wrapper {
+        padding: 10px 0;
+    }
+
+    .highlight-card img, .announcement-card img {
+        /* max-height: 80px; Further limit image height for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
 .our-sponsors {
     padding: 30px;
     background-color: rgba(255, 153, 51, 0.8); /* Saffron color with opacity */
@@ -386,48 +438,3 @@ html, body {
 
 
 
-
-
-
-
-
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .navbar-nav {
-        flex-direction: column;
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 1em;
-    }
-
-    .banner-text {
-        top:60%;
-    }
-    .banner-text h1 {
-        font-size: 0.4em; /* Adjust font size for smaller screens */
-        /* top: 60%; Adjust position to avoid overlap with navbar */
-    }
-    
-
-    .mission-statement, .announcements, .volunteer-form, .featured-highlights, .member-quotes {
-        padding: 20px;
-    }
-
-    .mission-statement h2, .announcements h2, .volunteer-form h2, .featured-highlights h2, .member-quotes h2 {
-        font-size: 1.2em;
-    }
-
-    .mission-statement .mission-text, .announcements p, .volunteer-form p, .featured-highlights p, .member-quotes p {
-        font-size: 0.9em;
-    }
-
-    .scrolling-wrapper {
-        padding: 10px 0;
-    }
-
-    .highlight-card img, .announcement-card img {
-        /* max-height: 80px; Further limit image height for smaller screens */
-    }
-}
